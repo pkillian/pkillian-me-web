@@ -119,42 +119,6 @@ a:hover {
     vertical-align: middle;
 }
 
-.header .sub-head .grav {
-    display: inline-block;
-    background-image: url("http://www.gravatar.com/avatar/abc3e69ddbd832803e9d241aacb3ea69.png");
-    background-size: 100%;
-    margin-bottom: 1px; /* Aligns img; bug? */
-    margin-left: 18px;
-    border-color: #f6d70e;
-    border-style: solid;
-
-    -moz-border-radius: 8px; /* Firefox 4 */
-    -ms-border-radius: 8px; /* Firefox 4 */
-    -webkit-border-radius: 8px; /* Safari and Chrome */
-    -o-border-radius: 8px; /* Opera */
-    border-radius: 8px;
-    
-    vertical-align: middle;
-    min-width: 45px;
-    min-height: 45px;
-
-    -moz-transition: border-color 0.5s; /* Firefox 4 */
-    -ms-transition: border-color 0.5s; /* Firefox 4 */
-    -webkit-transition: border-color 0.5s; /* Safari and Chrome */
-    -o-transition: border-color 0.5s; /* Opera */
-    transition: border-color 0.5s;
-}
-
-.header .sub-head .grav:hover {
-    border-color: #f3992a;
-
-    -moz-transition: border-color 0.5s; /* Firefox 4 */
-    -ms-transition: border-color 0.5s; /* Firefox 4 */
-    -webkit-transition: border-color 0.5s; /* Safari and Chrome */
-    -o-transition: border-color 0.5s; /* Opera */
-    transition: border-color 0.5s;
-}
-
 .layout {
     min-height: 600px;
     margin-top: 60px;
@@ -188,23 +152,49 @@ a:hover {
 
 .sidebar .sb_content {
     position: fixed;
-    top: 50px;
-    margin: 40px;
+    top: 60px;
+    margin: 30px;
     height: 100%;
 }
 
+.sidebar .sb_nameplate {
+    display: table-row;
+    height: 51px;
+}
+
 .sidebar .sb_icon {
+    display: table-cell;
     background-image: url("http://www.gravatar.com/avatar/abc3e69ddbd832803e9d241aacb3ea69.png");
-    background-size: 100%;
-    min-width: 45px;
-    min-height: 45px;
+    background-size: 101%; /* Slightly bigger to make sure it fills */
+    background-repeat: no-repeat;
+
+    min-width: 52px;
+    min-height: 52px;
+
+    -moz-border-radius: 8px; /* Firefox 4 */
+    -ms-border-radius: 8px; /* Firefox 4 */
+    -webkit-border-radius: 8px; /* Safari and Chrome */
+    -o-border-radius: 8px; /* Opera */
+    border-radius: 8px;
+    
+    vertical-align: middle;
+}
+
+.sidebar .sb_icon:hover {
+    border-color: #f3992a;
 }
 
 .sidebar .sb_nickname {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+
     font-size: 20pt;
     line-height: 24pt;
     font-family: 'Quattrocento Sans';
     font-weight: bold;
+
+    color: #000;
 }
 
 .sidebar .sb_name {
@@ -221,7 +211,7 @@ a:hover {
     display: block;
     height: inherit;
     width: 73%;
-    min-width: 75%;
+    min-width: 73%;
     min-width: 800px;
 }
 
