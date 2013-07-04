@@ -119,8 +119,7 @@ a:hover {
     vertical-align: middle;
 }
 
-.header .sub-head .grav,
-.sidebar .grav {
+.header .sub-head .grav {
     display: inline-block;
     background-image: url("http://www.gravatar.com/avatar/abc3e69ddbd832803e9d241aacb3ea69.png");
     background-size: 100%;
@@ -192,6 +191,13 @@ a:hover {
     top: 50px;
     margin: 40px;
     height: 100%;
+}
+
+.sidebar .sb_icon {
+    background-image: url("http://www.gravatar.com/avatar/abc3e69ddbd832803e9d241aacb3ea69.png");
+    background-size: 100%;
+    min-width: 45px;
+    min-height: 45px;
 }
 
 .sidebar .sb_nickname {
