@@ -119,7 +119,8 @@ a:hover {
     vertical-align: middle;
 }
 
-.header .sub-head .grav {
+.header .sub-head .grav,
+.sidebar .grav {
     display: inline-block;
     background-image: url("http://www.gravatar.com/avatar/abc3e69ddbd832803e9d241aacb3ea69.png");
     background-size: 100%;
