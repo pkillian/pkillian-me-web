@@ -10,6 +10,7 @@ function BlogCtrl($scope, $http) {
     jQuery.each(postIDs, function() {
 
       $http.get('/blog/blogposts/' + this + '.json').success(function(data) {
+        data.content = data.body.join('\n');
         $scope.blogposts.push(data);
       });
 

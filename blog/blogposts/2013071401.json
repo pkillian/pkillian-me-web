@@ -3,5 +3,9 @@
 	"date": "July 14th, 2013",
 	"title": "Test blogpost!",
 	"subtitle": "Subtitle",
-	"body": "This is a test blogpost.\nI hope it works well!\n\nTest spacing.\n\n\nEnd."
+	"body": [
+		"This is a test blogpost!", 
+		"This is going to be a really long post body to see how the text wraps by itself;",
+		"hopefully it all fits easily!"
+	]
 }
