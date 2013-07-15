@@ -1,14 +1,14 @@
 <!doctype html>
-<html>
-
+<html ng-app="pkillianme">
 <head>
     <meta charset="charset=utf-8">
     <meta http-equiv="Content-Type" content="text/html" >
+
     <title>PKillian :: Home</title>
 
     <link rel="icon" 
       type="image/png" 
-      href="/favicon.png">
+      href="/components/img/favicon.png">
     
     <!-- Google WebFonts -->
     <link 
@@ -17,18 +17,21 @@
         type='text/css'>
 
     <!-- Main style sheet -->
-    <link rel="stylesheet" href="/css/main-theme.css">
-
+    <link rel="stylesheet" href="/components/css/main-theme.css">
     <!-- jQuery 1.7.2 -->
-    <script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
-
+    <script type="text/javascript" src="/components/lib/jquery-1.8.3.min.js"></script>
     <!-- AngularJS 1.0.7 -->
-    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/components/lib/angular.min.js"></script>
+
+    <!-- Angular Directives -->
+    <script src="/components/js/app.js"></script>
+    <script src="/components/js/controllers.js"></script>
+
 </head>
 
 <body>
     <header class="header">
-        <a class="nameplate" href="./">
+        <a class="nameplate" href="/">
             <span class="name">pkillian</span><span class="extension">.me</span>
         </a>
 
@@ -54,39 +57,10 @@
             </div>
         </div>
 
-        <div class="main">
-            <article class="blogpost" id="test_blogpost">
-                <header>
-                    <h1 class="title">Test Post</h1>
-                    <h2 class="subhead">Test subhead</h2>
-                    <h3 class="date">02.09.2013</h3>
-                </header>
-                <section class="post_content">
-                    <h3>Testing</h3>
-                    <p>Testing of content in the blogpost.</p>
-                </section>
-            </article>
-
-            <article class="blogpost" id="test_blogpost2">
-                <header>
-                    <h1 class="title">Test Post</h1>
-                    <h2 class="subhead">Test subhead</h2>
-                    <h3 class="date">02.09.2013</h3>
-                </header>
-                <section class="post_content">
-                    <h3>Testing</h3>
-                    <p>Testing of content in the blogpost.</p>
-                </section>
-            </article>
-            <!-- <span style="margin: 10px;">Under Construction...</span><br>
-            <a style="margin-left: 10px;" href="http://www.linkedin.com/pub/patrick-killian/41/909/a61/">Check out Patrick's LinkedIn instead.</a></span> -->
+        <div class="main"> 
+            <div ng-view ></div>
         </div>
 
-
-        <div class="footer">
-            <div class="top"></div>
-            <div class="base"></div>
-        </div>
     </div>
 
 </body>

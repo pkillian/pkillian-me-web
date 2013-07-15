@@ -9,7 +9,7 @@ body {
     height: 100%;
     min-height: 100%;
     margin: 0;
-    background-image: url("/img/body-bg-groove.png");
+    background-image: url("/components/img/body-bg-groove.png");
     font-family: 'Varela Round', 'Helvetica', 'Arial', sans-serif;
 }
 
@@ -332,12 +332,12 @@ a:hover {
 .footer .top {
     z-index: inherit;
     height: 40px;
-    background-image: url("/img/footer-top-bg.png");
+    background-image: url("/components/img/footer-top-bg.png");
 }
 
 .footer .base {
     z-index: inherit;
     height: inherit;
-    background-image: url("/img/footer-bg.png");
+    background-image: url("/components/img/footer-bg.png");
     background-repeat: repeat;
 }
