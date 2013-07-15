@@ -23,6 +23,8 @@
     <!-- AngularJS 1.0.7 -->
     <script type="text/javascript" src="/components/lib/angular.min.js"></script>
 
+    <script src="/components/js/pkillianme.js"></script>
+
     <!-- Angular Directives -->
     <script src="/components/js/app.js"></script>
     <script src="/components/js/controllers.js"></script>
@@ -36,9 +38,9 @@
         </a>
 
         <div class="nav-btns">
-            <a class="section current" href="#/"><div class="btn">Home</div>
-            </a><a class="section" href="#/about"><div class="btn">About</div>
-            </a><a class="section" href="#/contact"><div class="btn">Contact</div></a>
+            <a class="section" href="#/" id="home_section_link"><div class="btn">Home</div>
+            </a><a class="section" href="#/about" id="about_section_link"><div class="btn">About</div>
+            </a><a class="section" href="#/contact" id="contact_section_link"><div class="btn">Contact</div></a>
         </div>
 
         <div class="sub-head">
@@ -58,7 +60,7 @@
         </div>
 
         <div class="main"> 
-            <div ng-view ></div>
+            <div ng-view class="angular-view"></div>
         </div>
 
     </div>

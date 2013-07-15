@@ -3,8 +3,11 @@
 /* Controllers */
 
 function BlogCtrl($scope, $http) {
+  pkill.setCurrentSection($('#home_section_link'));
 
+  /* Get all blog post data */
   $http.get('/blog/posts.json').success(function(postIDs) {
+
     $scope.blogposts = [];
 
     jQuery.each(postIDs, function() {
@@ -19,13 +22,21 @@ function BlogCtrl($scope, $http) {
 
 }
 
-//PhoneListCtrl.$inject = ['$scope', '$http'];
-
 
 function BlogPostCtrl($scope, $routeParams, $http) {
+  pkill.setCurrentSection($('#home_section_link'));
+
   $http.get('/blog/blogposts/' + $routeParams.postID + '.json').success(function(data) {
     $scope.post = data;
   });
 }
 
-//PhoneDetailCtrl.$inject = ['$scope', '$routeParams', '$http'];
+
+function AboutCtrl($scope) {
+  pkill.setCurrentSection($('#about_section_link'));
+}
+
+
+function ContactCtrl($scope) {
+  pkill.setCurrentSection($('#contact_section_link'));
+}

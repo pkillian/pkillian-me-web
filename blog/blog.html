@@ -1,14 +1,12 @@
 <!-- Begin Blog template -->
 
-<article ng-repeat="post in blogposts | orderBy:orderProp" class="blogpost" id="test_blogpost">
+<article ng-repeat="post in blogposts | orderBy:orderProp" class="blogpost" id="{{post.id}}_blogpost">
     <header>
         <h1 class="title">{{post.title}}</h1>
         <h2 class="subhead">{{post.subtitle}}</h2>
         <h3 class="date">{{post.date}}</h3>
     </header>
-    <section class="post_content">
-        {{post.content}}
-    </section>
+    <section class="post_content">{{post.content}}</section>
 </article>
 
 <!-- End Blog template -->
