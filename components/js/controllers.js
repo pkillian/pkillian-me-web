@@ -9,11 +9,11 @@ function BlogCtrl($scope, $http) {
   $http.get('/blog/posts.json').success(function(postIDs) {
 
     $scope.blogposts = [];
+    $scope.orderProp = 'id';
 
     jQuery.each(postIDs, function() {
 
       $http.get('/blog/blogposts/' + this + '.json').success(function(data) {
-        data.content = data.body.join('\n');
         $scope.blogposts.push(data);
       });
 

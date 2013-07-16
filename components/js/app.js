@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('pkillianme', []).
+angular.module('pkillianme', ['ngSanitize']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/blog', {
