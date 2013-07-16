@@ -13,7 +13,15 @@ function BlogCtrl($scope, $http) {
 
     jQuery.each(postIDs, function() {
 
-      $http.get('/blog/blogposts/' + this + '.json').success(function(data) {
+      var currentID = this;
+
+      $http.get('/blog/blogposts/json/' + currentID + '.json').success(function(data) {
+        if (!data.body) {
+          $http.get('/blog/blogposts/html/' + currentID + '.html').success(function(body_html) {
+            data.body = body_html;
+          });
+        }
+
         $scope.blogposts.push(data);
       });
 
