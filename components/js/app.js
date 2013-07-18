@@ -2,27 +2,33 @@
 
 /* App Module */
 
-angular.module('pkillianme', ['ngSanitize']).
+var app = angular.module('pkillianme', ['ngSanitize']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/blog', {
-  		  templateUrl: '/blog/blog.html',
-  		  controller: BlogCtrl
+        templateUrl: '/blog/blog.html?' + pkill.cacheBust,
+        controller: BlogCtrl
       }).
       when('/blog/:postID', {
-  		  templateUrl: '/blog/post.html',
-  		  controller: BlogPostCtrl
+        templateUrl: '/blog/post.html?' + pkill.cacheBust,
+        controller: BlogPostCtrl
       }).
       when('/about', {
-  		  templateUrl: '/about/about.html',
+        templateUrl: '/about/about.html?' + pkill.cacheBust,
         controller: AboutCtrl
       }).
       when('/contact', {
-  		  templateUrl: '/contact/contact.html',
+        templateUrl: '/contact/contact.html?' + pkill.cacheBust,
         controller: ContactCtrl
       }).
       otherwise({
-      	templateUrl: '/blog/blog.html',
-  		  controller: BlogCtrl
+        templateUrl: '/blog/blog.html?' + pkill.cacheBust,
+        controller: BlogCtrl
       });
-  }]);
+    }
+  ]
+);
+
+app.controller('htmlController', function($scope) {
+  $scope.cacheBust = Date.now();
+});

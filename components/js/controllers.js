@@ -15,9 +15,9 @@ function BlogCtrl($scope, $http) {
 
       var currentID = this;
 
-      $http.get('/blog/blogposts/json/' + currentID + '.json').success(function(data) {
+      $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
         if (!data.body) {
-          $http.get('/blog/blogposts/html/' + currentID + '.html').success(function(body_html) {
+          $http.get('/blog/blogposts/html/' + currentID + '.html?' + pkill.cacheBust).success(function(body_html) {
             data.body = body_html;
           });
         }
@@ -34,7 +34,7 @@ function BlogCtrl($scope, $http) {
 function BlogPostCtrl($scope, $routeParams, $http) {
   pkill.setCurrentSection($('#home_section_link'));
 
-  $http.get('/blog/blogposts/' + $routeParams.postID + '.json').success(function(data) {
+  $http.get('/blog/blogposts/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
     $scope.post = data;
   });
 }
