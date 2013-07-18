@@ -30,5 +30,5 @@ var app = angular.module('pkillianme', ['ngSanitize']).
 );
 
 app.controller('htmlController', function($scope) {
-  $scope.cacheBust = Date.now();
+  $scope.cacheBust = "2013-07-18-01";
 });
