@@ -11,6 +11,7 @@ body {
     margin: 0;
     background-image: url("/components/img/body-bg-groove.png");
     font-family: 'Varela Round', 'Helvetica', 'Arial', sans-serif;
+    overflow-y: hidden;
 }
 
 a {
@@ -136,14 +137,13 @@ a:hover {
 .content {
     position: relative;
     display: block;
-    overflow: hidden;
+    overflow-y: auto;
 
     min-height: 100%;
-    min-width: 100%;
     top: 60px;
     font-size: 36px;
     line-height: 36px;
-    min-width: 1051px;
+    min-width: 1088px;
 }
 
 .sidebar {
@@ -170,6 +170,7 @@ a:hover {
 }
 
 .sidebar .sb_nameplate {
+    position: fixed;
     display: table-row;
     height: 51px;
 }
@@ -222,9 +223,7 @@ a:hover {
     float: right;
     display: block;
     height: inherit;
-    width: 73%;
-    min-width: 73%;
-    min-width: 800px;
+    width: 77%;
 }
 
 .blogpost_container {
