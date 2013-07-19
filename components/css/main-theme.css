@@ -19,16 +19,23 @@ a {
     -webkit-transition: color 0.5s; /* Safari and Chrome */
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
+
     color: #f6d70e;
     text-decoration: none;
 }
 
 a:hover {
+    -moz-transition: color 0.5s; /* Firefox 4 */
+    -ms-transition: color 0.5s; /* Firefox 4 */
+    -webkit-transition: color 0.5s; /* Safari and Chrome */
+    -o-transition: color 0.5s; /* Opera */
+    transition: color 0.5s;
+
     color: #f3992a;
 }
 
 .header {
-    min-width: 905px;
+    min-width: 1005px;
     display: inline-block;
     top: 0;
     left: 0;
@@ -82,8 +89,8 @@ a:hover {
 }
 
 .header .nameplate {
-    margin-left: 96px;
-    margin-right: 18px;
+    margin-left: 92px;
+    margin-right: 22px;
     line-height: 60px;
 }
 
@@ -113,7 +120,7 @@ a:hover {
 }
 
 .header .sub-head {
-    margin-right: 8%;
+    margin-right: 92px;
     display: inline;
     float: right;
     vertical-align: middle;
@@ -129,6 +136,8 @@ a:hover {
 .content {
     position: relative;
     display: block;
+    overflow: hidden;
+
     min-height: 100%;
     min-width: 100%;
     top: 60px;
@@ -138,21 +147,24 @@ a:hover {
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     float: left;
     left: 0;
-    top: 60;
+    top: 60px;
     height: 100%;
     width: 23%;
+    min-width: 250px;
     border-right: 1px;
     border-right-color: #c0c0c0;
     border-right-style: solid;
     background-color: #ffffff;
+
+    overflow: hidden;
+    z-index: 100;
 }
 
 .sidebar .sb_content {
     position: fixed;
-    top: 60px;
     margin: 30px;
     height: 100%;
 }
@@ -276,6 +288,7 @@ a:hover {
 .blogpost .title {
     font-family: 'Varela Round', sans-serif;
     font-size: 18pt;
+    font-weight: normal;
     line-height: 18pt;
 
     -moz-transition: all 0.5s; /* Firefox 4 */

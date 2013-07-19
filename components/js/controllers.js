@@ -48,3 +48,7 @@ function AboutCtrl($scope) {
 function ContactCtrl($scope) {
   pkill.setCurrentSection($('#contact_section_link'));
 }
+
+function ResumeCtrl($scope) {
+  pkill.setCurrentSection($('#resume_section_link'));
+}
