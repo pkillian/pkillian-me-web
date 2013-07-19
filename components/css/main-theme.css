@@ -139,7 +139,8 @@ a:hover {
     display: block;
     overflow-y: auto;
 
-    min-height: 100%;
+    height: auto;
+    min-height: 90%;
     top: 60px;
     font-size: 36px;
     line-height: 36px;
@@ -219,15 +220,15 @@ a:hover {
 
 .main {
     position: absolute;
-    left: 23%;
+    left: 25%;
     float: right;
     display: block;
     height: inherit;
-    width: 77%;
+    width: 75%;
 }
 
 .blogpost_container {
-    margin: 20px 30px 0 30px;
+    margin: 20px 30px 0 0;
 }
 
 .blogpost_container hr {
