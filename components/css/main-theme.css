@@ -3,6 +3,11 @@
 html {
     height: 100%;
     min-height: 100%;
+    image-rendering: -moz-crisp-edges;          /* Firefox             */
+    image-rendering: -ms-crisp-edges;           /* Firefox             */
+    image-rendering: -o-crisp-edges;            /* Opera               */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+    image-rendering: crisp-edges;
 }
 
 body {
@@ -33,6 +38,14 @@ a:hover {
     transition: color 0.5s;
 
     color: #f3992a;
+}
+
+img {
+    image-rendering: -moz-crisp-edges;          /* Firefox             */
+    image-rendering: -ms-crisp-edges;           /* Firefox             */
+    image-rendering: -o-crisp-edges;            /* Opera               */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+    image-rendering: crisp-edges;
 }
 
 .header {
@@ -73,6 +86,10 @@ a:hover {
 }
 
 .header .nav_btns .btn {
+    padding: 0 10px 0 10px;
+}
+
+.header .nav_btns .current .btn {
     padding: 0 9px 0 9px;
 }
 
@@ -126,14 +143,14 @@ a:hover {
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-position-y: 70%;
-    margin-right: 72px;
+    margin-right: 92px;
     display: inline;
     float: right;
     vertical-align: middle;
 }
 
 .header .sub_head span {
-    padding-right: 20px;
+    padding-right: 23px;
 }
 
 .layout {
