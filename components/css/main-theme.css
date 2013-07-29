@@ -57,7 +57,7 @@ a:hover {
 }
 
 .header,
-.header .nav-btns {
+.header .nav_btns {
     white-space: nowrap;
     margin: 0;
     line-height: 60px;
@@ -66,17 +66,17 @@ a:hover {
 }
 
 .header .nameplate,
-.header .nav-btns,
-.header .nav-btns .section {
+.header .nav_btns,
+.header .nav_btns .section {
     display: inline;
     float: left;
 }
 
-.header .nav-btns .btn {
+.header .nav_btns .btn {
     padding: 0 9px 0 9px;
 }
 
-.header .nav-btns .current {
+.header .nav_btns .current {
     color: #f3992a;
     top: 0;
     height: 60px;
@@ -120,11 +120,20 @@ a:hover {
     transition: color 0.5s;
 }
 
-.header .sub-head {
-    margin-right: 92px;
+.header .sub_head {
+    background-image: url('/components/img/pkillian-watermark.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 70%;
+    margin-right: 72px;
     display: inline;
     float: right;
     vertical-align: middle;
+}
+
+.header .sub_head span {
+    padding-right: 20px;
 }
 
 .layout {
@@ -340,7 +349,6 @@ a:hover {
 }
 
 .blogpost .post_content h3 {
-    font-style:
     font-weight: bold;
 }
 
@@ -360,6 +368,41 @@ a:hover {
     margin: 5px 0;
     font-size: 12pt;
     line-height: 12pt;
+}
+
+.contact_container {
+    margin: 20px 30px 0 0;
+}
+
+.contact_container h1 {
+    line-height: 32px;
+    font-size: 32px;
+}
+
+.contact_container h2 {
+    line-height: 32px;
+    font-size: 26px;
+    font-family: 'Montserrat';
+}
+
+.contact_container h3 {
+    line-height: 26px;
+    font-size: 18px;
+    font-family: 'Montserrat';
+}
+
+.contact_container hr {
+    border: 0;
+    height: 1px;
+    background: #c0c0c0;
+}
+
+.contact_container span {
+    display: table-row;
+}
+
+.contact_container span * {
+    display: table-cell;
 }
 
 .footer {
