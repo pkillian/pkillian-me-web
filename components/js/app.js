@@ -7,32 +7,43 @@ var app = angular.module('pkillianme', ['ngSanitize']).
     $routeProvider.
       when('/blog', {
         templateUrl: '/blog/blog.html?' + pkill.cacheBust,
-        controller: BlogCtrl
+        controller: BlogCtrl,
+        title: "Home"
       }).
       when('/blog/:postID', {
         templateUrl: '/blog/post.html?' + pkill.cacheBust,
-        controller: BlogPostCtrl
+        controller: BlogPostCtrl,
+        title: "Blog"
       }).
       when('/about', {
         templateUrl: '/about/about.html?' + pkill.cacheBust,
-        controller: AboutCtrl
+        controller: AboutCtrl,
+        title: "About"
       }).
       when('/contact', {
         templateUrl: '/contact/contact.html?' + pkill.cacheBust,
-        controller: ContactCtrl
+        controller: ContactCtrl,
+        title: "Contact"
       }).
       when('/resume', {
         templateUrl: '/resume/resume.html?' + pkill.cacheBust,
-        controller: ResumeCtrl
+        controller: ResumeCtrl,
+        title: "Resume"
       }).
       otherwise({
         templateUrl: '/blog/blog.html?' + pkill.cacheBust,
-        controller: BlogCtrl
+        controller: BlogCtrl,
+        title: "Home"
       });
-    }
-  ]
-);
+    }]
+  ).run(['$rootScope', function($rootScope){
+    $rootScope.pageTitle = '';
+    $rootScope.$on('$routeChangeSuccess', function(evt, cur, prev) {
+      $rootScope.pageTitle = cur.title;
+    });
+    }]
+  );
 
 app.controller('htmlController', function($scope) {
-  $scope.cacheBust = "2013-07-18-02";
+  $scope.cacheBust = "2013-07-28-04";
 });
