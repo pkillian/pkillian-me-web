@@ -388,7 +388,7 @@ img {
 }
 
 .contact_container {
-    margin: 20px 30px 0 0;
+    margin: 30px 0 0 0;
 }
 
 .contact_container h1 {
@@ -414,11 +414,12 @@ img {
     background: #c0c0c0;
 }
 
-.contact_container span {
+.contact_container .contact_span {
     display: table-row;
 }
 
-.contact_container span * {
+.contact_container .contact_span * {
+    padding-left: 5px;
     display: table-cell;
 }
 
