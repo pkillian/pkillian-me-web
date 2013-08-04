@@ -36,9 +36,14 @@ function BlogCtrl($scope, $http) {
 function BlogPostCtrl($scope, $routeParams, $http) {
   pkill.setCurrentSection($('#home_section_link'));
 
-  $http.get('/blog/blogposts/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
+  $http.get('/blog/blogposts/json/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
+    if (!data.body) {
+      $http.get('/blog/blogposts/html/' + $routeParams.postID + '.html?' + pkill.cacheBust).success(function(body_html) {
+        data.body = body_html;
+      });
+    }
+
     $scope.post = data;
-    $scope.pageTitle = data.date;
   });
 }
 
