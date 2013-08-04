@@ -3,6 +3,8 @@
 html {
     height: 100%;
     min-height: 100%;
+    min-width: 1008px;
+
     image-rendering: -moz-crisp-edges;          /* Firefox             */
     image-rendering: -ms-crisp-edges;           /* Firefox             */
     image-rendering: -o-crisp-edges;            /* Opera               */
@@ -40,6 +42,12 @@ a:hover {
     color: #f3992a;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: #c0c0c0;
+}
+
 img {
     image-rendering: -moz-crisp-edges;          /* Firefox             */
     image-rendering: -ms-crisp-edges;           /* Firefox             */
@@ -49,7 +57,7 @@ img {
 }
 
 .header {
-    min-width: 1005px;
+    min-width: 1008px;
     display: inline-block;
     top: 0;
     left: 0;
@@ -71,12 +79,15 @@ img {
 
 .header,
 .header .nav_sections {
-    min-width: 260px;
     white-space: nowrap;
     margin: 0;
     line-height: 60px;
     font-size: 18px;
     vertical-align: middle;
+}
+
+.header .nav_sections {
+    min-width: 260px;
 }
 
 .header .nameplate,
@@ -171,7 +182,6 @@ img {
     top: 60px;
     font-size: 36px;
     line-height: 36px;
-    min-width: 1088px;
 }
 
 .sidebar {
@@ -205,7 +215,7 @@ img {
 
 .sidebar .sb_nameplate .social_media_list {
     list-style-type: none;
-    margin: 10px 0 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -265,14 +275,14 @@ img {
     width: 75%;
 }
 
-.blogpost_container {
-    margin: 20px 30px 0 0;
+.back_to_blog {
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
 }
 
-.blogpost_container hr {
-    border: 0;
-    height: 1px;
-    background: #c0c0c0;
+.blogpost_container {
+    margin: 20px 30px 0 0;
 }
 
 .blogpost {
@@ -283,7 +293,9 @@ img {
 
     font-family: 'Quattrocento Sans', 'Helvetica', sans-serif;
     color: #404040;
+}
 
+.dynamic_blogpost {
     /* border-left: #c0c0c0;*/
     /* border-left-width: 2px;*/
     /* border-left-style: solid;*/
@@ -301,7 +313,7 @@ img {
     transition: all 0.5s;
 }
 
-.blogpost:hover {
+.dynamic_blogpost:hover {
     background: rgba(250, 250, 250, 0.9);
     border-color: #f3992a;
 
@@ -328,6 +340,9 @@ img {
     font-size: 18pt;
     font-weight: normal;
     line-height: 18pt;
+}
+
+.dynamic_blogpost .title {
 
     -moz-transition: all 0.5s; /* Firefox 4 */
     -ms-transition: all 0.5s; /* Firefox 4 */
@@ -336,7 +351,7 @@ img {
     transition: all 0.5s;
 }
 
-.blogpost:hover .title {
+.dynamic_blogpost:hover .title {
     color: #f3992a;
 
     -moz-transition: all 0.5s; /* Firefox 4 */
