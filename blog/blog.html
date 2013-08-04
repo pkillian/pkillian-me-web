@@ -1,8 +1,8 @@
 <!-- Begin Blog template -->
 
 <div ng-repeat="post in blogposts | orderBy:orderProp" class="blogpost_container">
-    <a href="/#/blog/{{post.id}}">
-        <article class="blogpost" id="{{post.id}}_blogpost">
+    <a href="#/blog/{{post.id}}">
+        <article class="dynamic_blogpost blogpost" id="{{post.id}}_blogpost">
             <header>
                 <h1 class="title">{{post.title}}</h1>
                 <h2 class="subhead">{{post.subtitle}}</h2>
