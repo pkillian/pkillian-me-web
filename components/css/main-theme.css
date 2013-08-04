@@ -377,6 +377,7 @@ img {
 
 .blogpost .post_content h4 {
     margin: 5px 0;
+    padding-bottom: 5px;
     font-size: 14pt;
     line-height: 14pt;
 }
@@ -385,6 +386,7 @@ img {
     margin: 5px 0;
     font-size: 12pt;
     line-height: 12pt;
+    text-indent: 10px;
 }
 
 .contact_container,
