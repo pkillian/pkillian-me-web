@@ -70,7 +70,8 @@ img {
 }
 
 .header,
-.header .nav_btns {
+.header .nav_sections {
+    min-width: 260px;
     white-space: nowrap;
     margin: 0;
     line-height: 60px;
@@ -79,21 +80,21 @@ img {
 }
 
 .header .nameplate,
-.header .nav_btns,
-.header .nav_btns .section {
+.header .nav_sections,
+.header .nav_sections .section_link {
     display: inline;
     float: left;
 }
 
-.header .nav_btns .btn {
+.header .nav_sections .section_div {
     padding: 0 10px 0 10px;
 }
 
-.header .nav_btns .current .btn {
+.header .nav_sections .current .section_div {
     padding: 0 9px 0 9px;
 }
 
-.header .nav_btns .current {
+.header .nav_sections .current {
     color: #f3992a;
     top: 0;
     height: 60px;
@@ -200,6 +201,17 @@ img {
     position: fixed;
     display: table-row;
     height: 51px;
+}
+
+.sidebar .sb_nameplate .social_media_list {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.sidebar .sb_nameplate .social_media_list li {
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .sidebar .sb_icon {
