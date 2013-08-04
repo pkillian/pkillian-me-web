@@ -387,28 +387,33 @@ img {
     line-height: 12pt;
 }
 
-.contact_container {
-    margin: 30px 0 0 0;
+.contact_container,
+.resume_container {
+    margin: 30px 30px 0 0;
 }
 
-.contact_container h1 {
+.contact_container h1,
+.resume_container h1 {
     line-height: 32px;
     font-size: 32px;
 }
 
-.contact_container h2 {
+.contact_container h2,
+.resume_container h2 {
     line-height: 32px;
     font-size: 26px;
     font-family: 'Montserrat';
 }
 
-.contact_container h3 {
+.contact_container h3,
+.resume_container h3 {
     line-height: 26px;
     font-size: 18px;
     font-family: 'Montserrat';
 }
 
-.contact_container hr {
+.contact_container hr,
+.resume_container hr {
     border: 0;
     height: 1px;
     background: #c0c0c0;
@@ -421,6 +426,20 @@ img {
 .contact_container .contact_span * {
     padding-left: 5px;
     display: table-cell;
+}
+
+.resume_container .download_link {
+    float: right;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.resume_container .pdf_object {
+    -moz-border-radius: 8px; /* Firefox 4 */
+    -ms-border-radius: 8px; /* Firefox 4 */
+    -webkit-border-radius: 8px; /* Safari and Chrome */
+    -o-border-radius: 8px; /* Opera */
+    border-radius: 8px;
 }
 
 .footer {
@@ -442,4 +461,13 @@ img {
     height: inherit;
     background-image: url("/components/img/footer-bg.png");
     background-repeat: repeat;
+}
+
+/* Misc. */
+.no_bottom_margin {
+    margin-bottom: 0;
+}
+
+.no_top_margin {
+    margin-top: 0;
 }
