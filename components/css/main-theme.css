@@ -3,7 +3,7 @@
 html {
     height: 100%;
     min-height: 100%;
-    min-width: 1008px;
+    min-width: 1088px;
 
     image-rendering: -moz-crisp-edges;          /* Firefox             */
     image-rendering: -ms-crisp-edges;           /* Firefox             */
@@ -57,7 +57,7 @@ img {
 }
 
 .header {
-    min-width: 1008px;
+    min-width: 1088px;
     display: inline-block;
     top: 0;
     left: 0;
@@ -278,7 +278,7 @@ img {
 .back_to_blog {
     position: absolute;
     right: 30px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .blogpost_container {
