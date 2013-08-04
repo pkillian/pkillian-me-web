@@ -20,7 +20,7 @@ function BlogCtrl($scope, $http) {
       $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
         if (!data.body) {
           $http.get('/blog/blogposts/html/' + currentID + '.html?' + pkill.cacheBust).success(function(body_html) {
-            data.body = body_html;
+            data.body = body_html.substring(0, body_html.indexOf('<end/>'));
           });
         }
 
@@ -33,10 +33,12 @@ function BlogCtrl($scope, $http) {
 }
 
 
-function BlogPostCtrl($scope, $routeParams, $http) {
+function BlogPostCtrl($scope, $routeParams, $http, $window) {
   pkill.setCurrentSection($('#home_section_link'));
 
   $http.get('/blog/blogposts/json/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
+    $window.document.title = 'PKillian :: ' + data.date;
+
     if (!data.body) {
       $http.get('/blog/blogposts/html/' + $routeParams.postID + '.html?' + pkill.cacheBust).success(function(body_html) {
         data.body = body_html;
