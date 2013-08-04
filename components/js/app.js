@@ -8,7 +8,7 @@ var app = angular.module('pkillianme', ['ngSanitize']).
       when('/blog', {
         templateUrl: '/blog/blog.html?' + pkill.cacheBust,
         controller: BlogCtrl,
-        title: "Home"
+        title: "Blog"
       }).
       when('/blog/:postID', {
         templateUrl: '/blog/post.html?' + pkill.cacheBust,
