@@ -3,7 +3,7 @@
 html {
     height: 100%;
     min-height: 100%;
-    min-width: 1088px;
+    min-width: 1200px;
 
     image-rendering: -moz-crisp-edges;          /* Firefox             */
     image-rendering: -ms-crisp-edges;           /* Firefox             */
@@ -58,7 +58,7 @@ img {
 }
 
 .header {
-    min-width: 1088px;
+    min-width: 1200px;
     display: inline-block;
     top: 0;
     left: 0;
@@ -192,7 +192,7 @@ img {
     top: 60px;
     height: 100%;
     width: 23%;
-    min-width: 250px;
+    min-width: 280px;
     border-right: 1px;
     border-right-color: #c0c0c0;
     border-right-style: solid;
@@ -200,6 +200,18 @@ img {
 
     overflow: hidden;
     z-index: 100;
+}
+
+.sidebar .cc {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+
+    font-size: 12px;
+    font-family: "Montserrat";
+    color: #e0e0e0;
+
+    z-index: -1;
 }
 
 .sidebar .sb_content {
@@ -279,11 +291,11 @@ img {
 
 .main {
     position: absolute;
-    left: 25%;
     float: right;
     display: block;
     height: inherit;
-    width: 75%;
+    width: 73%;
+    margin-left: 25%;
 }
 
 .back_to_blog {
@@ -399,7 +411,7 @@ img {
 .blogpost .subhead,
 .blogpost .post_content {
     margin: 0;
-    padding: 10px 0 0 10px;
+    padding: 10px 10px 0 10px;
     height: auto;
 }
 
@@ -414,17 +426,22 @@ img {
 }
 
 .blogpost .post_content h4 {
-    margin: 5px 0;
+    margin: 15px 0;
     padding-bottom: 5px;
     font-size: 14pt;
     line-height: 14pt;
 }
 
 .blogpost .post_content p {
-    margin: 5px 0;
+    margin: 0 0 15px 0;
     font-size: 12pt;
     line-height: 12pt;
     text-indent: 10px;
+}
+
+
+.post_page p {
+    margin-bottom: 15px;
 }
 
 .contact_container,
