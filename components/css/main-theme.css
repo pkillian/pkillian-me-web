@@ -150,7 +150,7 @@ img {
     transition: color 0.5s;
 }
 
-.header .sub_head {
+.header .subhead {
     background-image: url('/components/img/pkillian-watermark.png');
     background-size: 50px;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@ img {
     vertical-align: middle;
 }
 
-.header .sub_head span {
+.header .subhead span {
     padding-right: 23px;
 }
 
@@ -204,14 +204,26 @@ img {
 
 .sidebar .cc {
     position: absolute;
-    left: 30px;
+    right: 9%;
     bottom: 70px;
 
     font-size: 12px;
     font-family: "Montserrat";
     color: #e0e0e0;
 
+    height: 30px;
+
     z-index: -1;
+    vertical-align: middle;
+}
+
+.sidebar .cc-img {
+    width: 22px;
+    height: 11px;
+    padding-right: 5px;
+    vertical-align: middle;
+
+    opacity: .2;
 }
 
 .sidebar .sb_content {
@@ -388,8 +400,8 @@ img {
 .blogpost .subhead {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
-    font-size: 14pt;
-    line-height: 14pt;
+    font-size: 12pt;
+    line-height: 12pt;
 }
 
 .blogpost .date {
@@ -436,9 +448,40 @@ img {
     margin: 0 0 15px 0;
     font-size: 12pt;
     line-height: 12pt;
-    text-indent: 10px;
+    text-indent: 15px;
 }
 
+.blogpost .sources {
+    padding: 0 0 0 25px;
+    list-style-type: decimal;
+    font-size: 10pt;
+    line-height: 10pt;
+}
+
+.blogpost .sources li,
+.blogpost .sources a {
+    -moz-transition: color 0.5s; /* Firefox 4 */
+    -ms-transition: color 0.5s; /* Firefox 4 */
+    -webkit-transition: color 0.5s; /* Safari and Chrome */
+    -o-transition: color 0.5s; /* Opera */
+    transition: color 0.5s;
+    
+    color: #A0A0A0;
+}
+
+.blogpost .sources a:hover {
+    -moz-transition: color 0.5s; /* Firefox 4 */
+    -ms-transition: color 0.5s; /* Firefox 4 */
+    -webkit-transition: color 0.5s; /* Safari and Chrome */
+    -o-transition: color 0.5s; /* Opera */
+    transition: color 0.5s;
+
+    color: #f3992a;
+}
+
+.blogpost sup {
+    color: #A0A0A0;
+}
 
 .post_page p {
     margin-bottom: 15px;
