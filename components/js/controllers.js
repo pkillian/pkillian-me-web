@@ -35,6 +35,10 @@ function BlogCtrl($scope, $http) {
 
 function BlogPostCtrl($scope, $routeParams, $http, $window) {
   pkill.setCurrentSection($('#home_section_link'));
+  
+  $scope.$watch('body', function() { 
+    pkill.bindColorHighlightsToCitations();
+  });
 
   $http.get('/blog/blogposts/json/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
     $window.document.title = 'PKillian :: ' + data.date;
@@ -46,7 +50,9 @@ function BlogPostCtrl($scope, $routeParams, $http, $window) {
     }
 
     $scope.post = data;
+
   });
+
 }
 
 
