@@ -465,7 +465,7 @@ img {
     -webkit-transition: color 0.5s; /* Safari and Chrome */
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
-    
+
     color: #A0A0A0;
 }
 
@@ -480,6 +480,7 @@ img {
 }
 
 .blogpost sup {
+    font-size: 8pt;
     color: #A0A0A0;
 }
 
