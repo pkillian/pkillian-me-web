@@ -21,7 +21,7 @@ function BlogCtrl($scope, $http) {
         if (!data.body) {
           $http.get('/blog/blogposts/html/' + currentID + '.html?' + pkill.cacheBust).success(function(body_html) {
             data.body = body_html.substring(0, body_html.indexOf('<end/>'));
-            data.body = data.body.replace(/<\s*sup.*\/\s*sup\s*>/g, '');
+            data.body = data.body.replace(/<\s*sup.*?\/\s*sup\s*>/g, '');
           });
         }
 
