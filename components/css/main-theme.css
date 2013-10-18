@@ -480,7 +480,12 @@ img {
     color: #F3992A;
 }
 
-.blogpost .citation {
+.blogpost sup {
+    font-size: 9pt;
+    vertical-align: top;
+}
+
+.static_blogpost .citation {
     -moz-transition: color 0.5s; /* Firefox 4 */
     -ms-transition: color 0.5s; /* Firefox 4 */
     -webkit-transition: color 0.5s; /* Safari and Chrome */
@@ -488,10 +493,7 @@ img {
     transition: color 0.5s;
 }
 
-.blogpost sup {
-    font-size: 9pt;
-    vertical-align: top;
-
+.static_blogpost sup {
     -moz-transition: color 0.5s; /* Firefox 4 */
     -ms-transition: color 0.5s; /* Firefox 4 */
     -webkit-transition: color 0.5s; /* Safari and Chrome */
@@ -501,8 +503,8 @@ img {
     color: #A0A0A0;
 }
 
-.blogpost .citation:hover ,
-.blogpost .citation:hover sup {
+.static_blogpost .citation:hover,
+.static_blogpost .citation:hover sup {
     -moz-transition: color 0.5s; /* Firefox 4 */
     -ms-transition: color 0.5s; /* Firefox 4 */
     -webkit-transition: color 0.5s; /* Safari and Chrome */

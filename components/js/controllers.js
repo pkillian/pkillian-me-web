@@ -7,6 +7,10 @@ function BlogCtrl($scope, $http) {
 
   pkill.setCurrentSection($('#home_section_link'));
 
+  $scope.$watch('body', function() { 
+    pkill.unbindColorHighlightsToCitations();
+  });
+
   /* Get all blog post data */
   $http.get('/blog/posts.json').success(function(postIDs) {
 

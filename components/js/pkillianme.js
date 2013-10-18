@@ -3,7 +3,7 @@ var pkill = {};
 (function(that, $, window, undefined) {
   "use strict";
 
-  this.cacheBust = "2013-08-15-01";
+  this.cacheBust = "2013-09-04-02";
 
   this.setCurrentSection = function($section) {
     $section.parent().find('.current').removeClass('current');
@@ -42,6 +42,13 @@ var pkill = {};
       $('#' + $(this).attr('id').replace('source', '')).css('color', '#404040');
       $('#' + $(this).attr('id').replace('source', '')).children().css('color', '#A0A0A0');
     });
+  };
+
+  this.unbindColorHighlightsToCitations = function() {
+    $('#viewport').undelegate('.citation', 'mouseenter');
+    $('#viewport').undelegate('.citation', 'mouseleave');
+    $('#viewport').undelegate('.source_link', 'mouseenter');
+    $('#viewport').undelegate('.source_link', 'mouseleave');
   };
 
 }).call(pkill, pkill, jQuery, window);
