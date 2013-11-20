@@ -45,5 +45,6 @@ var app = angular.module('pkillianme', ['ngSanitize']).
   );
 
 app.controller('htmlController', function($scope) {
-  $scope.cacheBust = "2013-08-15-01";
+  $scope.cacheBust = "2013-11-19-01";
+  $scope.year      = new Date().getFullYear();
 });

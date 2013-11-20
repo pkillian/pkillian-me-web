@@ -3,7 +3,7 @@ var pkill = {};
 (function(that, $, window, undefined) {
   "use strict";
 
-  this.cacheBust = "2013-09-04-02";
+  this.cacheBust = "2013-11-19-01";
 
   this.setCurrentSection = function($section) {
     $section.parent().find('.current').removeClass('current');
