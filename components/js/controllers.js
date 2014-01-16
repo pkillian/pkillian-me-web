@@ -12,93 +12,29 @@ function BlogCtrl($scope, $http) {
     pkill.unbindColorHighlightsToCitations();
   });
 
-  /* Get all blog post data */
-  $http.get('/blog/posts.json').success(function(postIDs) {
+  $scope.blogposts = [];
+  $scope.orderProp = 'id';
 
-    $scope.blogposts = [];
-    $scope.orderProp = 'id';
+  for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
 
-    for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
+    $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
 
-      $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
+      if (!data.body_md) {
+        $http.get('/blog/blogposts/md/' + currentID + '.md?' + pkill.cacheBust).success(function(body_md) {
+          body_md = body_md.substring(0, body_md.indexOf('<end/>'));
+          data.body_md = markdown.toHTML(body_md);
+        });
+      }
 
-        if (!data.body) {
-          $http.get('/blog/blogposts/html/' + currentID + '.html?' + pkill.cacheBust).success(function(body_html) {
-            data.body = body_html.substring(0, body_html.indexOf('<end/>'));
-            data.body = data.body.replace(/<\s*sup.*?\/\s*sup\s*>/g, '');
-          });
-        }
+      $scope.blogposts.push(data);
+    });
 
-        $scope.blogposts.push(data);
-      });
-
-    }
-  });
-
-}
-
-
-function BlogMarkdownCtrl($scope, $http) {
-  $scope.pageTitle = "Home";
-
-  pkill.setCurrentSection($('#home_section_link'));
-
-  $scope.$watch('body', function() { 
-    pkill.unbindColorHighlightsToCitations();
-  });
-
-  /* Get all blog post data */
-  $http.get('/blog/posts.json').success(function(postIDs) {
-
-    $scope.blogposts = [];
-    $scope.orderProp = 'id';
-
-    for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
-
-      $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
-
-        if (!data.body_md) {
-          $http.get('/blog/blogposts/md/' + currentID + '.md?' + pkill.cacheBust).success(function(body_md) {
-            body_md = body_md.substring(0, body_md.indexOf('<end/>'));
-            data.body_md = markdown.toHTML(body_md);
-          });
-        }
-
-        $scope.blogposts.push(data);
-      });
-
-    }
-  });
+  }
 
 }
 
 
 function BlogPostCtrl($scope, $routeParams, $http, $window) {
-  pkill.setCurrentSection($('#home_section_link'));
-  $scope.pageTitle = "Home";
-  
-  $scope.$watch('body', function() { 
-    pkill.bindColorHighlightsToCitations();
-  });
-
-  $http.get('/blog/blogposts/json/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {
-    $scope.pageTitle = data.date;
-    $window.document.title = 'PKillian :: ' + data.date;
-
-    if (!data.body) {
-      $http.get('/blog/blogposts/html/' + $routeParams.postID + '.html?' + pkill.cacheBust).success(function(body_html) {
-        data.body = body_html;
-      });
-    }
-
-    $scope.post = data;
-
-  });
-
-}
-
-
-function BlogMarkdownPostCtrl($scope, $routeParams, $http, $window) {
   pkill.setCurrentSection($('#home_section_link'));
 
   $http.get('/blog/blogposts/json/' + $routeParams.postID + '.json?' + pkill.cacheBust).success(function(data) {

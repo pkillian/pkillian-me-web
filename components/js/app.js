@@ -7,12 +7,12 @@ var app = angular.module('pkillianme', ['ngSanitize']).
     $routeProvider.
       when('/blog', {
         templateUrl: '/blog/blog_md.html?' + pkill.cacheBust,
-        controller: BlogMarkdownCtrl,
+        controller: BlogCtrl,
         title: "Blog"
       }).
       when('/blog/:postID', {
         templateUrl: '/blog/post_md.html?' + pkill.cacheBust,
-        controller: BlogMarkdownPostCtrl,
+        controller: BlogPostCtrl,
         title: "Blog"
       }).
       when('/about', {
@@ -32,7 +32,7 @@ var app = angular.module('pkillianme', ['ngSanitize']).
       }).
       otherwise({
         templateUrl: '/blog/blog_md.html?' + pkill.cacheBust,
-        controller: BlogMarkdownCtrl,
+        controller: BlogCtrl,
         title: "Home"
       });
     }]
