@@ -4,8 +4,23 @@ require([pkill.markdownLocation], function (markdown) {});
 /* Controllers */
 
 function BlogCtrl($scope, $http) {
-  $scope.pageTitle = "Home";
 
+  // Declare this function to async $http.get safely without having data races
+  function GetPost(scope, post_id) {
+    $http.get('/blog/blogposts/json/' + post_id + '.json?' + pkill.cacheBust).success(function(data) {
+
+      if (!data.body_md) {
+        $http.get('/blog/blogposts/md/' + post_id + '.md?' + pkill.cacheBust).success(function(body_md) {
+          body_md = body_md.substring(0, body_md.indexOf('<end/>'));
+          data.body_md = markdown.toHTML(body_md);
+        });
+      }
+
+      scope.blogposts.push(data);
+    });
+  }
+
+  $scope.pageTitle = "Home";
   pkill.setCurrentSection($('#home_section_link'));
 
   $scope.$watch('body', function() { 
@@ -16,19 +31,7 @@ function BlogCtrl($scope, $http) {
   $scope.orderProp = 'id';
 
   for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
-
-    $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
-
-      if (!data.body_md) {
-        $http.get('/blog/blogposts/md/' + currentID + '.md?' + pkill.cacheBust).success(function(body_md) {
-          body_md = body_md.substring(0, body_md.indexOf('<end/>'));
-          data.body_md = markdown.toHTML(body_md);
-        });
-      }
-
-      $scope.blogposts.push(data);
-    });
-
+    GetPost($scope, currentID);
   }
 
 }
@@ -49,7 +52,6 @@ function BlogPostCtrl($scope, $routeParams, $http, $window) {
     }
 
     $scope.post = data;
-
   });
 
 }
