@@ -3,8 +3,9 @@ var pkill = {};
 (function(that, $, window, undefined) {
   "use strict";
 
-  this.cacheBust = "2014011601";
+  this.cacheBust = "2014011602";
   this.markdownLocation = "/components/lib/node_modules/markdown/lib/markdown.js";
+  this.numBlogPosts = 1;
 
   this.setCurrentSection = function($section) {
     $section.parent().find('.current').removeClass('current');

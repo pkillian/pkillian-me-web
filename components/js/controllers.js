@@ -18,11 +18,10 @@ function BlogCtrl($scope, $http) {
     $scope.blogposts = [];
     $scope.orderProp = 'id';
 
-    jQuery.each(postIDs, function() {
-
-      var currentID = this;
+    for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
 
       $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
+
         if (!data.body) {
           $http.get('/blog/blogposts/html/' + currentID + '.html?' + pkill.cacheBust).success(function(body_html) {
             data.body = body_html.substring(0, body_html.indexOf('<end/>'));
@@ -33,7 +32,7 @@ function BlogCtrl($scope, $http) {
         $scope.blogposts.push(data);
       });
 
-    });
+    }
   });
 
 }
@@ -54,12 +53,11 @@ function BlogMarkdownCtrl($scope, $http) {
     $scope.blogposts = [];
     $scope.orderProp = 'id';
 
-    jQuery.each(postIDs, function() {
-
-      var currentID = this;
+    for (var currentID = 1; currentID <= pkill.numBlogPosts; currentID++) {
 
       $http.get('/blog/blogposts/json/' + currentID + '.json?' + pkill.cacheBust).success(function(data) {
-        if (!data.body) {
+
+        if (!data.body_md) {
           $http.get('/blog/blogposts/md/' + currentID + '.md?' + pkill.cacheBust).success(function(body_md) {
             body_md = body_md.substring(0, body_md.indexOf('<end/>'));
             data.body_md = markdown.toHTML(body_md);
@@ -69,7 +67,7 @@ function BlogMarkdownCtrl($scope, $http) {
         $scope.blogposts.push(data);
       });
 
-    });
+    }
   });
 
 }
