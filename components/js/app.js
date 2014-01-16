@@ -6,13 +6,13 @@ var app = angular.module('pkillianme', ['ngSanitize']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/blog', {
-        templateUrl: '/blog/blog.html?' + pkill.cacheBust,
-        controller: BlogCtrl,
+        templateUrl: '/blog/blog_md.html?' + pkill.cacheBust,
+        controller: BlogMarkdownCtrl,
         title: "Blog"
       }).
       when('/blog/:postID', {
-        templateUrl: '/blog/post.html?' + pkill.cacheBust,
-        controller: BlogPostCtrl,
+        templateUrl: '/blog/post_md.html?' + pkill.cacheBust,
+        controller: BlogMarkdownPostCtrl,
         title: "Blog"
       }).
       when('/about', {
@@ -31,8 +31,8 @@ var app = angular.module('pkillianme', ['ngSanitize']).
         title: "Resume"
       }).
       otherwise({
-        templateUrl: '/blog/blog.html?' + pkill.cacheBust,
-        controller: BlogCtrl,
+        templateUrl: '/blog/blog_md.html?' + pkill.cacheBust,
+        controller: BlogMarkdownCtrl,
         title: "Home"
       });
     }]
@@ -45,6 +45,6 @@ var app = angular.module('pkillianme', ['ngSanitize']).
   );
 
 app.controller('htmlController', function($scope) {
-  $scope.cacheBust = "2013-11-19-01";
+  $scope.cacheBust = pkill.cacheBust;
   $scope.year      = new Date().getFullYear();
 });
