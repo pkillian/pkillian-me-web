@@ -464,6 +464,10 @@ img {
     margin: 0;
 }
 
+.blogpost .post_content pre + p {
+    text-indent: 0;
+}
+
 .blogpost .sources {
     padding: 0 0 0 25px;
     list-style-type: decimal;
