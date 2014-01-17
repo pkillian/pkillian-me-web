@@ -154,8 +154,7 @@ img {
     background-image: url('/components/img/pkillian-watermark.png');
     background-size: 50px;
     background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 70%;
+    background-position: right;
     margin-right: 92px;
     display: inline;
     float: right;
