@@ -4,7 +4,7 @@ var pkill = {};
   "use strict";
 
   this.cacheBust = "2014011602";
-  this.markdownLocation = "/components/lib/node_modules/markdown/lib/markdown.js";
+  this.markdownLocation = "/components/lib/node_modules/marked/lib/marked.js";
   this.numBlogPosts = 1;
 
   this.setCurrentSection = function($section) {

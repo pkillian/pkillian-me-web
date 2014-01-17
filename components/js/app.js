@@ -25,6 +25,11 @@ var app = angular.module('pkillianme', ['ngSanitize']).
         controller: ContactCtrl,
         title: "Contact"
       }).
+      when('/projects', {
+        templateUrl: '/projects/projects.html?' + pkill.cacheBust,
+        controller: ProjectsCtrl,
+        title: "Projects"
+      }).
       when('/resume', {
         templateUrl: '/resume/resume.html?' + pkill.cacheBust,
         controller: ResumeCtrl,
