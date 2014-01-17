@@ -87,5 +87,20 @@ function ProjectsCtrl($scope) {
 function ResumeCtrl($scope) {
   $scope.pageTitle = "Resume";
 
+  var resizePDF = function() {
+    var minHeight = 250;
+    var newHeight = $(window).height() - 200;
+
+    if (newHeight < minHeight) {
+      newHeight = minHeight;
+    }
+
+    $('.pdf_container').height(newHeight);
+    $('.pdf_object').height(newHeight);
+  }
+
+  $(window).resize(resizePDF);
+  $(document).ready(resizePDF);
+
   pkill.setCurrentSection($('#resume_section_link'));
 }
