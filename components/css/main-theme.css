@@ -42,6 +42,17 @@ a:hover {
     color: #F3992A;
 }
 
+code {
+    -moz-border-radius: .25em; /* Firefox 4 */
+    -ms-border-radius: .25em; /* Firefox 4 */
+    -webkit-border-radius: .25em; /* Safari and Chrome */
+    -o-border-radius: .25em; /* Opera */
+    border-radius: .25em;
+    background-color: #E0E0E0;
+
+    padding: 0 .25em 0 .25em;
+}
+
 hr {
     border: 0;
     height: 1px;
