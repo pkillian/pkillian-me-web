@@ -28,7 +28,7 @@ a {
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
 
-    color: #F6D70E;
+    color: #F3992A;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a:hover {
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
 
-    color: #F3992A;
+    color: #F6D70E;
 }
 
 hr {
@@ -107,7 +107,7 @@ img {
 }
 
 .header .nav_sections .current {
-    color: #F3992A;
+    color: #F6D70E;
     top: 0;
     height: 60px;
     border-left-width: 1px;
@@ -138,11 +138,11 @@ img {
 }
 
 .header .nameplate .extension {
-    color: #F6D70E;
+    color: #F3992A;
 }
 
 .header .nameplate:hover .extension {
-    color: #F3992A;
+    color: #F6D70E;
     -moz-transition: color 0.5s; /* Firefox 4 */
     -ms-transition: color 0.5s; /* Firefox 4 */
     -webkit-transition: color 0.5s; /* Safari and Chrome */
@@ -267,7 +267,7 @@ img {
 }
 
 .sidebar .sb_icon:hover {
-    border-color: #F3992A;
+    border-color: #F6D70E;
 }
 
 .sidebar .sb_nickname {
@@ -504,7 +504,7 @@ img {
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
 
-    color: #F3992A;
+    color: #F6D70E;
 }
 
 .blogpost sup {
@@ -525,13 +525,13 @@ img {
 }
 
 .dynamic_blogpost:hover {
-    border-color: #F3992A;
+    border-color: #F6D70E;
 
-    -moz-box-shadow: 0 0 8px 2px rgba(243, 105, 42, 0.2); /* Firefox 4 */
-    -ms-box-shadow: 0 0 8px 2px rgba(243, 105, 42, 0.2); /* Firefox 4 */
-    -webkit-box-shadow: 0 0 8px 2px rgba(243, 105, 42, 0.2); /* Safari and Chrome */
-    -o-box-shadow: 0 0 8px 2px rgba(243, 105, 42, 0.2); /* Opera */
-    box-shadow: 0 0 8px 2px rgba(243, 105, 42, 0.2);
+    -moz-box-shadow: 0 0 8px 2px rgba(246, 215, 14, 0.2); /* Firefox 4 */
+    -ms-box-shadow: 0 0 8px 2px rgba(246, 215, 14, 0.2); /* Firefox 4 */
+    -webkit-box-shadow: 0 0 8px 2px rgba(246, 215, 14, 0.2); /* Safari and Chrome */
+    -o-box-shadow: 0 0 8px 2px rgba(246, 215, 14, 0.2); /* Opera */
+    box-shadow: 0 0 8px 2px rgba(246, 215, 14, 0.2);
 
     -moz-transition: all 0.5s; /* Firefox 4 */
     -ms-transition: all 0.5s; /* Firefox 4 */
@@ -550,7 +550,7 @@ img {
 }
 
 .dynamic_blogpost:hover .title {
-    color: #F3992A;
+    color: #F6D70E;
 
     -moz-transition: all 0.5s; /* Firefox 4 */
     -ms-transition: all 0.5s; /* Firefox 4 */
@@ -560,7 +560,7 @@ img {
 }
 
 .dynamic_blogpost:hover .continue {
-    color: #F3992A;
+    color: #F6D70E;
 
     -moz-transition: all 0.5s; /* Firefox 4 */
     -ms-transition: all 0.5s; /* Firefox 4 */
@@ -595,7 +595,7 @@ img {
     -o-transition: color 0.5s; /* Opera */
     transition: color 0.5s;
     
-    color: #F3992A;
+    color: #F6D70E;
 }
 
 .post_page p {
