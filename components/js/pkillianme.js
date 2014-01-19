@@ -74,5 +74,5 @@ var pkill = {};
 
 }).call(pkill, pkill, jQuery, window, document);
 
-$(document).ready(pkill.resizeWindow);
+//$(document).ready(pkill.resizeWindow);
 
