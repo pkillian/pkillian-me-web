@@ -395,6 +395,8 @@ img {
 
 .blogpost pre code {
     border-style: none;
+    background-color: none;
+    line-height: 14pt;
 
     -moz-border-radius: 0; /* Firefox 4 */
     -ms-border-radius: 0; /* Firefox 4 */
