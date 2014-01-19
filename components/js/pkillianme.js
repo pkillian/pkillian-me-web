@@ -3,6 +3,8 @@ var pkill = {};
 (function(that, $, window, document, undefined) {
   "use strict";
 
+  $.browser.mobile = navigator.userAgent.match(/Android|Blackberry|iP[aho]|Mini|Mobile/);
+
   this.cacheBust = "2014011802";
   this.markdownLocation = "/components/lib/node_modules/marked/lib/marked.js";
   this.numBlogPosts = 1;
