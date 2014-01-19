@@ -5,7 +5,15 @@ var pkill = {};
 
   $.browser.mobile = navigator.userAgent.match(/Android|Blackberry|iP[aho]|Mini|Mobile/);
 
-  this.cacheBust = "2014011802";
+  $(document).ready(function() {
+    $('a').each(function() {
+      if ($(this).attr('href').indexOf('http') == 0) {
+        $(this).attr('target', '_blank');
+      }
+    });
+  });
+
+  this.cacheBust = "2014011901";
   this.markdownLocation = "/components/lib/node_modules/marked/lib/marked.js";
   this.numBlogPosts = 1;
 
