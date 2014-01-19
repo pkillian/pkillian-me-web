@@ -54,11 +54,6 @@ var pkill = {};
   };
 
   this.resizeWindow = function() {
-    var mainOffset = $('.main').offset();
-    mainOffset.left = $('.sidebar').width() + 25;
-
-    $('.main').offset(mainOffset);
-
     var minResumeHeight = 250;
     var newResumeHeight = $(window).height() - 200;
 
@@ -74,5 +69,5 @@ var pkill = {};
 
 }).call(pkill, pkill, jQuery, window, document);
 
-//$(document).ready(pkill.resizeWindow);
+$(document).ready(pkill.resizeWindow);
 

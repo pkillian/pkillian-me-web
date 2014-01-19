@@ -34,8 +34,6 @@ function BlogCtrl($scope, $http) {
     GetPosts($scope, currentID);
   }
 
-  pkill.resizeWindow();
-
 }
 
 
@@ -60,7 +58,6 @@ function BlogPostCtrl($scope, $routeParams, $http, $window) {
     $scope.post = data;
   });
 
-  pkill.resizeWindow();
 }
 
 
@@ -81,14 +78,10 @@ function ProjectsCtrl($scope) {
   $scope.pageTitle = "Projects";
 
   pkill.setCurrentSection($('#projects_section_link'));
-
-  pkill.resizeWindow();
 }
 
 function ResumeCtrl($scope) {
   $scope.pageTitle = "Resume";
 
   pkill.setCurrentSection($('#resume_section_link'));
-
-  pkill.resizeWindow();
 }
