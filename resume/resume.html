@@ -3,10 +3,9 @@
 <div class="resume_container">
     <h1 style="margin-bottom: 5px;">Resume</h1>
     <div class="pdf_container">
-        <a class="download_link" href="/resume/pkillian_resume.pdf?{{cacheBust}}">Click here to download...</a>
-        <object class="pdf_object" data="/resume/pkillian_resume_preview.pdf?{{cacheBust}}" type="application/pdf">
-            <param name="src" value="/resume/pkillian_resume_preview.pdf?{{cacheBust}}" />
-            <p>It appears your Web browser is not configured to display PDF files. <a href="/resume/pkillian_resume_preview.pdf?{{cacheBust}}">Click here to download it instead.</a></p>
+        <object class="pdf_object" src="/resume/pkillian_resume_preview.pdf" type="application/pdf">
+            <span style="pdf_fail"><p>It seems like your browser can't display PDF files...</p></span>
+            <span style="pdf_fail"><a href="/resume/pkillian_resume.pdf">Click here to download instead.</a></span>
         </object>
     </div>
 </div>

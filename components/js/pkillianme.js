@@ -73,3 +73,6 @@ var pkill = {};
   $(window).resize(this.resizeWindow);
 
 }).call(pkill, pkill, jQuery, window, document);
+
+$(document).ready(pkill.resizeWindow);
+
