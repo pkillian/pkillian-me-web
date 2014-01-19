@@ -708,6 +708,14 @@ img {
     transition: all 0.5s ease;
 }
 
+.resume_container #resume_preview_page {
+    -moz-box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.2); /* Firefox 4 */
+    -ms-box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.2); /* Firefox 4 */
+    -webkit-box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.2); /* Safari and Chrome */
+    -o-box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.2); /* Opera */
+    box-shadow: 0 0 8px 2px rgba(170, 170, 170, 0.2);
+}
+
 .resume_container #resume_preview_hover_text,
 .resume_container #resume_preview_page {
     -moz-border-radius: .25em; /* Firefox 4 */
