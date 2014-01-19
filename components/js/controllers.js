@@ -87,9 +87,9 @@ function ResumeCtrl($scope) {
 
   var flipPage = function() {
     if ($('#resume_preview_page').attr('src').indexOf('2') >= 0) {
-      $('#resume_preview_page').attr('src', '/resume/pkillian_resume_web.png');
+      $('#resume_preview_page').attr('src', "/resume/pkillian_resume_web.png?" + pkill.cacheBust);
     } else {
-      $('#resume_preview_page').attr('src', '/resume/pkillian_resume_web2.png');
+      $('#resume_preview_page').attr('src', "/resume/pkillian_resume_web2.png?" + pkill.cacheBust);
     }
   }
 
