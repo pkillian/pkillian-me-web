@@ -225,6 +225,16 @@ img {
     opacity: .2;
 }
 
+.sidebar .sb_about {
+    display: block;
+    font-size: 10pt;
+    line-height: 12pt;
+}
+
+.sidebar .sb_about_container {
+    margin-top: 15px;
+}
+
 .sidebar .sb_content {
     position: fixed;
     margin: 30px;
@@ -470,11 +480,9 @@ img {
     margin: 0;
 }
 
-.blogpost .post_content pre - p {
-    color: #FF0000;
-}
-
-.blogpost .post_content pre + p {
+.blogpost .post_content pre + p,
+.blogpost .post_content ol + p,
+.blogpost .post_content ul + p {
     text-indent: 0;
 }
 
