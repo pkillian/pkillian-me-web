@@ -1,8 +1,4 @@
 'use strict';
-var markdown;
-require([pkill.markdownLocation], function (marked) {
-  markdown = marked;
-});
 
 /* Controllers */
 
@@ -16,7 +12,7 @@ function BlogCtrl($scope, $http) {
         $http.get('/blog/blogposts/md/' + post_id + '.md?' + pkill.cacheBust).success(function(body_md) {
           body_md = body_md.substring(0, body_md.indexOf('<end/>'));
 
-          data.body_md = markdown(body_md);
+          data.body_md = marked(body_md);
         });
       }
 
@@ -38,6 +34,8 @@ function BlogCtrl($scope, $http) {
     GetPosts($scope, currentID);
   }
 
+  pkill.resizeWindow();
+
 }
 
 
@@ -52,7 +50,7 @@ function BlogPostCtrl($scope, $routeParams, $http, $window) {
       $http.get('/blog/blogposts/md/' + $routeParams.postID + '.md?' + pkill.cacheBust).success(function(blog_md) {
         blog_md = blog_md.replace(/<\s*end\s*\/>/g, '');
 
-        markdown(blog_md, function (err, content) {
+        marked(blog_md, function (err, content) {
           if (err) throw err;
           data.blog_md = content;
         });
@@ -62,6 +60,7 @@ function BlogPostCtrl($scope, $routeParams, $http, $window) {
     $scope.post = data;
   });
 
+  pkill.resizeWindow();
 }
 
 
@@ -82,25 +81,14 @@ function ProjectsCtrl($scope) {
   $scope.pageTitle = "Projects";
 
   pkill.setCurrentSection($('#projects_section_link'));
+
+  pkill.resizeWindow();
 }
 
 function ResumeCtrl($scope) {
   $scope.pageTitle = "Resume";
 
-  var resizePDF = function() {
-    var minHeight = 250;
-    var newHeight = $(window).height() - 200;
-
-    if (newHeight < minHeight) {
-      newHeight = minHeight;
-    }
-
-    $('.pdf_container').height(newHeight);
-    $('.pdf_object').height(newHeight);
-  }
-
-  $(window).resize(resizePDF);
-  $(document).ready(resizePDF);
-
   pkill.setCurrentSection($('#resume_section_link'));
+
+  pkill.resizeWindow();
 }

@@ -1,6 +1,6 @@
 var pkill = {};
 
-(function(that, $, window, undefined) {
+(function(that, $, window, document, undefined) {
   "use strict";
 
   this.cacheBust = "2014011701";
@@ -53,4 +53,23 @@ var pkill = {};
     $('#viewport').undelegate('.source_link', 'mouseleave');
   };
 
-}).call(pkill, pkill, jQuery, window);
+  this.resizeWindow = function() {
+    var mainOffset = $('.main').offset();
+    mainOffset.left = $('.sidebar').width() + 25;
+
+    $('.main').offset(mainOffset);
+
+    var minResumeHeight = 250;
+    var newResumeHeight = $(window).height() - 200;
+
+    if (newResumeHeight < minResumeHeight) {
+      newResumeHeight = minResumeHeight;
+    }
+
+    $('.pdf_container').height(newResumeHeight);
+    $('.pdf_object').height(newResumeHeight);
+  }
+
+  $(window).resize(this.resizeWindow);
+
+}).call(pkill, pkill, jQuery, window, document);
