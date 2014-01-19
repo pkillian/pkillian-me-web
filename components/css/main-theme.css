@@ -687,6 +687,38 @@ img {
     margin-bottom: 10px;
 }
 
+.resume_container #resume_preview_hover_text {
+    background-color: rgba(255,255,255,0.8);
+    color: #F3992A;
+
+    position: absolute;
+    top: 60;
+
+    width: 100%;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+
+    z-index: 7;
+    opacity: 0;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.resume_container #resume_preview_hover_text,
+.resume_container #resume_preview_page {
+    -moz-border-radius: .25em; /* Firefox 4 */
+    -ms-border-radius: .25em; /* Firefox 4 */
+    -webkit-border-radius: .25em; /* Safari and Chrome */
+    -o-border-radius: .25em; /* Opera */
+    border-radius: .25em;
+
+    width: 612px;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

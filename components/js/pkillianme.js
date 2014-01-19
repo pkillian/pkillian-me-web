@@ -53,21 +53,4 @@ var pkill = {};
     $('#viewport').undelegate('.source_link', 'mouseleave');
   };
 
-  this.resizeWindow = function() {
-    var minResumeHeight = 250;
-    var newResumeHeight = $(window).height() - 200;
-
-    if (newResumeHeight < minResumeHeight) {
-      newResumeHeight = minResumeHeight;
-    }
-
-    $('.pdf_container').height(newResumeHeight);
-    $('.pdf_object').height(newResumeHeight);
-  }
-
-  $(window).resize(this.resizeWindow);
-
 }).call(pkill, pkill, jQuery, window, document);
-
-$(document).ready(pkill.resizeWindow);
-

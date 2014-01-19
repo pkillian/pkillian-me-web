@@ -85,5 +85,25 @@ function ResumeCtrl($scope) {
 
   pkill.setCurrentSection($('#resume_section_link'));
 
-  pkill.resizeWindow();
+  var flipPage = function() {
+    if ($('#resume_preview_page').attr('src').indexOf('2') >= 0) {
+      $('#resume_preview_page').attr('src', '/resume/pkillian_resume_web.png');
+    } else {
+      $('#resume_preview_page').attr('src', '/resume/pkillian_resume_web2.png');
+    }
+  }
+
+  $('#resume_preview_page').click(function() {
+    flipPage();
+  });
+
+  $('#resume_preview_hover_text').click(function() {
+    flipPage();
+  });
+
+  $('#resume_preview_page').hover(function() {
+    $('#resume_preview_hover_text').css('opacity', '1');
+  }, function() {
+    $('#resume_preview_hover_text').css('opacity', '0');
+  });
 }
