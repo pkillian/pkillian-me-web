@@ -84,4 +84,6 @@ function ResumeCtrl($scope) {
   $scope.pageTitle = "Resume";
 
   pkill.setCurrentSection($('#resume_section_link'));
+
+  pkill.resizeWindow();
 }
