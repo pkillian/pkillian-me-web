@@ -86,7 +86,7 @@ function ResumeCtrl($scope) {
   pkill.setCurrentSection($('#resume_section_link'));
 
   var flipPage = function() {
-    if ($('#resume_preview_page').attr('src').indexOf('2') >= 0) {
+    if ($('#resume_preview_page').attr('src').indexOf('_web2') >= 0) {
       $('#resume_preview_page').attr('src', "/resume/pkillian_resume_web.png?" + pkill.cacheBust);
     } else {
       $('#resume_preview_page').attr('src', "/resume/pkillian_resume_web2.png?" + pkill.cacheBust);
