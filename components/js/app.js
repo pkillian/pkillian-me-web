@@ -15,6 +15,8 @@ var app = angular.module('pkillianme', ['ngSanitize']).
         controller: BlogPostCtrl,
         title: "Blog"
       }).
+      /* Prohibit these routes until later
+       ***********************************
       when('/about', {
         templateUrl: '/about/about.html?' + pkill.cacheBust,
         controller: AboutCtrl,
@@ -30,6 +32,8 @@ var app = angular.module('pkillianme', ['ngSanitize']).
         controller: ProjectsCtrl,
         title: "Projects"
       }).
+       ***********************************
+       */
       when('/resume', {
         templateUrl: '/resume/resume.html?' + pkill.cacheBust,
         controller: ResumeCtrl,
