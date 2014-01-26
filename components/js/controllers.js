@@ -20,7 +20,7 @@ function BlogCtrl($scope, $http) {
     });
   }
 
-  $scope.pageTitle = "Home";
+  $scope.pageTitle = "Blog";
   pkill.setCurrentSection($('#home_section_link'));
 
   $scope.$watch('body', function() { 

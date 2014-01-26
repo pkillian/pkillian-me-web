@@ -42,7 +42,7 @@ var app = angular.module('pkillianme', ['ngSanitize']).
       otherwise({
         templateUrl: '/blog/blog_md.html?' + pkill.cacheBust,
         controller: BlogCtrl,
-        title: "Home"
+        title: "Blog"
       });
     }]
   ).run(['$rootScope', function($rootScope){
