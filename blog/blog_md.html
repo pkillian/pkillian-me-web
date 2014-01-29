@@ -1,6 +1,6 @@
 <!-- Begin Blog template -->
 
-<div ng-repeat="post in blogposts | orderBy:orderProp" class="blogpost_container">
+<div ng-repeat="post in blogposts | orderBy:orderProp:!reverse" class="blogpost_container">
     <a href="#/blog/{{post.id}}">
         <article class="dynamic_blogpost blogpost" id="{{post.id}}_blogpost">
             <header>
